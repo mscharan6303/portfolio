@@ -24,7 +24,7 @@ const App = () => {
       <nav className={`fixed w-full z-50 transition-all duration-300 border-b border-transparent ${isScrolled ? 'bg-white/95 backdrop-blur-sm border-slate-200 py-4' : 'bg-transparent py-6'}`}>
         <div className="max-w-5xl mx-auto px-6 flex justify-between items-center">
           <a href="#home" className="text-xl font-extrabold tracking-tighter text-slate-900">
-            MSC.
+            MSC
           </a>
           
           <div className="hidden md:flex gap-8 text-sm font-medium text-slate-600">
@@ -39,8 +39,8 @@ const App = () => {
 
       <main>
         {/* 1. Home Section */}
-        <section id="home" className="pt-40 pb-20 md:pt-48 md:pb-32 px-6 flex flex-col justify-center min-h-screen">
-          <div className="max-w-5xl mx-auto w-full flex flex-col-reverse md:flex-row items-center justify-between gap-12">
+        <section id="home" className="pt-32 pb-16 md:pt-48 md:pb-24 px-6 flex flex-col justify-center">
+          <div className="max-w-5xl mx-auto w-full flex flex-col-reverse md:flex-row items-center justify-between gap-8 md:gap-12">
             
             <div className="flex-1 md:pr-8">
               <p className="text-slate-500 font-semibold tracking-widest uppercase text-sm mb-6">Portfolio</p>
@@ -63,7 +63,7 @@ const App = () => {
             <div className="flex-shrink-0">
               <div className="w-56 h-56 md:w-72 md:h-72 rounded-full overflow-hidden border-4 border-slate-100 shadow-lg bg-slate-100">
                 <img 
-                  src="/profile.jpg" 
+                  src={`${import.meta.env.BASE_URL}profile.jpg`} 
                   alt="Mannepalli Sai Charan" 
                   className="w-full h-full object-cover"
                   onError={(e) => { e.target.src = 'https://ui-avatars.com/api/?name=Sai+Charan&background=f1f5f9&color=0f172a&size=512' }}
@@ -71,12 +71,6 @@ const App = () => {
               </div>
             </div>
 
-          </div>
-          
-          <div className="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce">
-            <a href="#about" className="text-slate-400 hover:text-slate-900 transition-colors">
-              <ChevronDown size={24} />
-            </a>
           </div>
         </section>
 
@@ -88,10 +82,10 @@ const App = () => {
             </div>
             <div className="md:col-span-8">
               <p className="text-lg text-slate-600 leading-relaxed mb-6">
-                I am a passionate software developer constantly seeking to improve my technical skills through self-learning and hands-on projects. I enjoy diving deep into web technologies and practical problem-solving.
+                Motivated B.Tech Computer Science student with a strong foundation in Java, full-stack web development, and hands-on AI-ML experience through an AICTE & Google-supported internship.
               </p>
               <p className="text-lg text-slate-600 leading-relaxed">
-                My approach focuses on building clean, efficient, and user-centric applications. Whether exploring AI-assisted development tools or writing core backend logic, I aim to create software that is genuinely useful and intuitively simple.
+                A quick learner with strong analytical and team collaboration skills, I have delivered end-to-end projects spanning e-commerce, browser security, and railway tech. I am constantly seeking opportunities to build impactful software solutions that are genuinely useful and user-centric.
               </p>
             </div>
           </div>
@@ -109,7 +103,11 @@ const App = () => {
                 <div className="mb-10">
                   <h3 className="text-lg font-bold text-slate-800 mb-4 uppercase tracking-wide text-sm">Development & Technologies</h3>
                   <div className="flex flex-wrap gap-2">
-                    {['HTML', 'CSS', 'JavaScript', 'Java', 'Node.js', 'MongoDB', 'SQL', 'React', 'Tailwind CSS'].map((skill) => (
+                    {[
+                      'Java (Proficient)', 'JavaScript (Intermediate)', 'Python (Basic)', 'C (Basic)', 
+                      'HTML5', 'CSS3', 'ReactJS (Intermediate)', 'Node.js', 'Express.js (Intermediate)', 
+                      'MongoDB', 'MySQL', 'Microsoft Azure (Intermediate)'
+                    ].map((skill) => (
                       <span key={skill} className="chip">
                         {skill}
                       </span>
@@ -117,12 +115,23 @@ const App = () => {
                   </div>
                 </div>
 
-                <div>
-                  <h3 className="text-lg font-bold text-slate-800 mb-4 uppercase tracking-wide text-sm">Tools & Workflows</h3>
+                <div className="mb-10">
+                  <h3 className="text-lg font-bold text-slate-800 mb-4 uppercase tracking-wide text-sm">Tools</h3>
                   <div className="flex flex-wrap gap-2">
-                    {['Git', 'GitHub', 'VS Code', 'Postman'].map((tool) => (
+                    {['Git', 'GitHub'].map((tool) => (
                       <span key={tool} className="chip">
                         {tool}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-bold text-slate-800 mb-4 uppercase tracking-wide text-sm">Soft Skills</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {['Problem-solving', 'Team collaboration', 'Analytical thinking', 'Communication'].map((skill) => (
+                      <span key={skill} className="chip">
+                        {skill}
                       </span>
                     ))}
                   </div>
@@ -146,10 +155,10 @@ const App = () => {
                 <h3 className="text-2xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">Farm to Home</h3>
               </div>
               <p className="text-slate-600 mb-8 leading-relaxed">
-                An online platform designed to bridge the gap between farmers and consumers, allowing for direct delivery of organic products without middlemen.
+                Full-stack platform connecting farmers directly with consumers to ensure fair pricing and fresh produce delivery. Includes product listing, shopping cart, and order management.
               </p>
               <div className="flex flex-wrap gap-2">
-                {['HTML', 'CSS', 'JavaScript', 'Node.js'].map(tech => (
+                {['ReactJS', 'Node.js', 'Express.js', 'MongoDB', 'HTML5', 'CSS3'].map(tech => (
                   <span key={tech} className="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-1 rounded">
                     {tech}
                   </span>
@@ -160,13 +169,13 @@ const App = () => {
             {/* Project 2 */}
             <div className="group border border-slate-200 p-8 rounded-xl hover:shadow-lg transition-all duration-300 bg-white">
               <div className="flex justify-between items-start mb-6">
-                <h3 className="text-2xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">Finance Tracker</h3>
+                <h3 className="text-2xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">Rail Swap</h3>
               </div>
               <p className="text-slate-600 mb-8 leading-relaxed">
-                A comprehensive application for tracking daily expenses, setting savings goals, and managing personal budgets to maintain financial health.
+                Web application enabling railway passengers to post and browse seat-swap requests, coordinate exchanges, and scan QR codes or parse PDF tickets — improving travel comfort without manual staff intervention.
               </p>
               <div className="flex flex-wrap gap-2">
-                {['React', 'Tailwind', 'MongoDB'].map(tech => (
+                {['React', 'TypeScript', 'Node.js', 'Express.js', 'Supabase', 'Tailwind CSS'].map(tech => (
                   <span key={tech} className="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-1 rounded">
                     {tech}
                   </span>
@@ -177,13 +186,13 @@ const App = () => {
             {/* Project 3 */}
             <div className="group border border-slate-200 p-8 rounded-xl hover:shadow-lg transition-all duration-300 bg-white md:col-span-2">
               <div className="flex justify-between items-start mb-6">
-                <h3 className="text-2xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">AI-Based Privacy Intelligence</h3>
+                <h3 className="text-2xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">AI-Based Privacy Intelligence System</h3>
               </div>
               <p className="text-slate-600 mb-8 leading-relaxed max-w-3xl">
-                An academic research project focused on privacy awareness and monitoring. Implemented AI-based conceptual models to detect potential digital security risks and enhance data protection for end users.
+                Browser extension protecting users from malicious websites using AI and crowdsourced threat intelligence. Performs real-time URL analysis and alerts users before accessing harmful content.
               </p>
               <div className="flex flex-wrap gap-2">
-                {['Python', 'Machine Learning', 'Data Analysis'].map(tech => (
+                {['JavaScript', 'Python', 'Machine Learning'].map(tech => (
                   <span key={tech} className="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-1 rounded">
                     {tech}
                   </span>
@@ -204,16 +213,15 @@ const App = () => {
               <div className="md:col-span-8">
                 <div className="flex flex-col gap-4">
                   {[
-                    { name: 'Responsive Web Design', issuer: 'freeCodeCamp', link: '/certificates/RESPONSIVE WEB DESIGN FREE CODE CAMP CERTIFICATION.pdf' },
-                    { name: 'Programming in Java', issuer: 'NPTEL', link: '/certificates/Java certificate.pdf' },
-                    { name: 'Data Analytics with Python', issuer: 'NPTEL', link: '/certificates/Data Analytics With Python.pdf' },
-                    { name: 'The Joy of Computing Using Python', issuer: 'NPTEL', link: '/certificates/The Joy of Computing using Python certificate.pdf' },
-                    { name: 'AI-ML Virtual Internship', issuer: 'EduSkills', link: '/certificates/MANNEPALLI SAI CHARAN   LONG CERTIFICATE 851054.pdf' },
-                    { name: 'Java Course', issuer: 'Udemy', link: '/certificates/UDEMY JAVA certificate.pdf' },
-                    { name: 'Java Training', issuer: 'CodeTantra', link: '/certificates/CODE TANTRA Java Certifcate.pdf' },
-                    { name: 'Deloitte Technology Job Simulation', issuer: 'Forage', link: '/certificates/Deloitte Technology Job Simulation Certificate.pdf' },
-                    { name: 'AWS Solutions Architecture Job Simulation', issuer: 'Forage', link: '/certificates/AWS  Solutions Architecture Job Simulation certificate.pdf' },
-                    { name: 'Quantum Fundamentals Program', issuer: 'APSCHE/WISER', link: '/certificates/APGOVQUANTUMCOMPUTINGCERTIFICATE.pdf' }
+                    { name: 'Responsive Web Design', issuer: 'freeCodeCamp', link: `${import.meta.env.BASE_URL}certificates/RESPONSIVE WEB DESIGN FREE CODE CAMP CERTIFICATION.pdf` },
+                    { name: 'Programming in Java', issuer: 'NPTEL', link: `${import.meta.env.BASE_URL}certificates/Java certificate.pdf` },
+                    { name: 'Data Analytics with Python', issuer: 'NPTEL', link: `${import.meta.env.BASE_URL}certificates/Data Analytics With Python.pdf` },
+                    { name: 'The Joy of Computing Using Python', issuer: 'NPTEL', link: `${import.meta.env.BASE_URL}certificates/The Joy of Computing using Python certificate.pdf` },
+                    { name: 'AI-ML Virtual Internship', issuer: 'EduSkills', link: `${import.meta.env.BASE_URL}certificates/MANNEPALLI SAI CHARAN   LONG CERTIFICATE 851054.pdf` },
+                    { name: 'Java Course', issuer: 'Udemy', link: `${import.meta.env.BASE_URL}certificates/UDEMY JAVA certificate.pdf` },
+                    { name: 'Java Training', issuer: 'CodeTantra', link: `${import.meta.env.BASE_URL}certificates/CODE TANTRA Java Certifcate.pdf` },
+                    { name: 'Quantum Fundamentals Program', issuer: 'APSCHE/WISER', link: `${import.meta.env.BASE_URL}certificates/APGOVQUANTUMCOMPUTINGCERTIFICATE.pdf` },
+                    { name: 'Claude 101', issuer: 'Anthropic', link: '#' }
                   ].map((cert, index) => (
                     <div key={index} className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-slate-200 last:border-0 last:pb-0">
                       <div>
@@ -240,15 +248,15 @@ const App = () => {
         <section id="activities" className="section-container">
           <div className="grid md:grid-cols-12 gap-12">
             <div className="md:col-span-4">
-              <h2 className="heading-primary">Leadership.</h2>
+              <h2 className="heading-primary">Leadership &<br/>Achievements.</h2>
             </div>
             <div className="md:col-span-8">
               <div className="space-y-8">
                 {[
-                  { title: 'Class Representative', desc: 'Acted as a liaison between students and faculty, organizing class activities, disseminating information, and managing core communications.' },
-                  { title: 'Project Group Leader', desc: 'Led diverse teams in various academic projects, effectively coordinating tasks, managing timelines, and ensuring the successful delivery of objectives.' },
-                  { title: 'NSS Participation', desc: 'Actively participated in National Service Scheme community service and social awareness campaigns to contribute to society.' },
-                  { title: 'Technical Workshops & Guest Lectures', desc: 'Regularly attended various technical seminars and workshops to continuously stay updated with evolving industry trends.' }
+                  { title: 'Class Representative — QIS College', desc: 'Served as a communication bridge between the B.Tech CSE batch and faculty, coordinating academic schedules and institutional communications. Facilitated resolution of student concerns.' },
+                  { title: 'Master Minds Prathibha Puraskaram', desc: 'Awarded for securing 975/1000 (97.5%) in Intermediate Board Examinations by Master Minds Educational Institution.' },
+                  { title: 'WIZ National Spell Bee', desc: 'Certificate of Merit. Recognised for outstanding performance and selected to represent at the State Level Competition.' },
+                  { title: 'QIS FEST & Science Expo', desc: 'Participated in the Technical Fun Treasure Hunt at QIS FEST 2025. Secured 1st Prize in the Science Expo at Sri Chaitanya School.' }
                 ].map((activity, index) => (
                   <div key={index} className="relative pl-6 border-l-2 border-slate-200">
                     <div className="absolute w-3 h-3 bg-slate-400 rounded-full -left-[7px] top-1.5 border-2 border-white"></div>
