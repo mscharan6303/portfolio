@@ -188,6 +188,7 @@ const App = () => {
     { name: 'MySQL', category: 'cloud-db', level: 'Intermediate', icon: Database, desc: 'Relational schemas, SQL queries, table joins' },
     { name: 'MongoDB', category: 'cloud-db', level: 'Intermediate', icon: Database, desc: 'Document schemas, Mongoose ORM, database queries' },
     { name: 'SQL', category: 'cloud-db', level: 'Intermediate', icon: Database, desc: 'Structured query language for relational database management' },
+    { name: 'AWS', category: 'cloud-db', level: 'Intermediate', icon: Server, desc: 'Cloud infrastructure fundamentals, EC2, S3, and deployment concepts' },
     { name: 'Vercel', category: 'cloud-db', level: 'Intermediate', icon: Globe, desc: 'Frontend cloud deployment, CI/CD pipelines & serverless functions' },
     { name: 'Git', category: 'tools', level: 'Proficient', icon: GitBranch, desc: 'Version control, branching strategies & commit workflows' },
     { name: 'GitHub', category: 'tools', level: 'Proficient', icon: GitBranch, desc: 'Remote repositories, pull requests & code reviews' },
