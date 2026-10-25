@@ -130,7 +130,8 @@ const App = () => {
         'Real-time inventory and pricing management'
       ],
       icon: Sprout,
-      badge: 'Full-Stack Web'
+      badge: 'Full-Stack Web',
+      githubUrl: 'https://github.com/mscharan6303/Farm-to-home'
     },
     {
       id: 'rail-swap',
@@ -147,11 +148,12 @@ const App = () => {
         'Preference filters (Berth type, Bay, Coach)'
       ],
       icon: Train,
-      badge: 'Smart Systems'
+      badge: 'Smart Systems',
+      githubUrl: 'https://github.com/mscharan6303/Rail_Swap'
     },
     {
-      id: 'ai-privacy',
-      title: 'AI Privacy Intelligence System',
+      id: 'ai-safe-network',
+      title: 'AI Safe Network',
       category: 'ai-security',
       subtitle: 'Real-Time Browser Threat Detector & Security Extension',
       description: 'A security tool and browser extension that analyzes web URLs in real time to detect malicious links and phishing threats using Machine Learning algorithms.',
@@ -164,7 +166,8 @@ const App = () => {
         'Security metrics dashboard for browsing safety'
       ],
       icon: ShieldCheck,
-      badge: 'AI & Web Security'
+      badge: 'AI & Web Security',
+      githubUrl: 'https://github.com/mscharan6303/ai-safe-network'
     }
   ];
 
@@ -188,7 +191,7 @@ const App = () => {
     { name: 'MySQL', category: 'cloud-db', level: 'Intermediate', icon: Database, desc: 'Relational schemas, SQL queries, table joins' },
     { name: 'MongoDB', category: 'cloud-db', level: 'Intermediate', icon: Database, desc: 'Document schemas, Mongoose ORM, database queries' },
     { name: 'SQL', category: 'cloud-db', level: 'Intermediate', icon: Database, desc: 'Structured query language for relational database management' },
-    { name: 'AWS', category: 'cloud-db', level: 'Intermediate', icon: Server, desc: 'Cloud infrastructure fundamentals, EC2, S3, and deployment concepts' },
+
     { name: 'Vercel', category: 'cloud-db', level: 'Intermediate', icon: Globe, desc: 'Frontend cloud deployment, CI/CD pipelines & serverless functions' },
     { name: 'Git', category: 'tools', level: 'Proficient', icon: GitBranch, desc: 'Version control, branching strategies & commit workflows' },
     { name: 'GitHub', category: 'tools', level: 'Proficient', icon: GitBranch, desc: 'Remote repositories, pull requests & code reviews' },
@@ -597,7 +600,7 @@ const App = () => {
                     'Full-Stack Web Development (React / Node)',
                     'AI-ML Internship (Google & AICTE)',
                     'Class Representative Leadership',
-                    'Cloud Fundamentals (Azure & AWS)',
+                    'Cloud & Deployment (Vercel)',
                     '97.5% Intermediate Board Excellence'
                   ].map((item, idx) => (
                     <div key={idx} className="flex items-center gap-2 text-zinc-800 font-semibold bg-zinc-50 p-2.5 rounded-lg border border-zinc-200/70">
@@ -628,7 +631,7 @@ const App = () => {
                   },
                   {
                     title: 'Cloud & Leadership',
-                    desc: 'Familiar with Azure App Services and AWS infrastructure concepts, alongside proven leadership experience as Class Representative.',
+                    desc: 'Experienced with cloud deployment workflows using Vercel, alongside proven leadership experience as Class Representative.',
                     icon: User
                   }
                 ].map((pillar, idx) => (
@@ -906,7 +909,7 @@ const App = () => {
                   Close
                 </button>
                 <a
-                  href="https://github.com/mscharan6303"
+                  href={selectedProjectModal.githubUrl}
                   target="_blank"
                   rel="noreferrer"
                   className="px-4 py-2 rounded-lg bg-zinc-900 text-white text-xs font-bold hover:bg-zinc-800 transition-colors flex items-center gap-2"
@@ -938,7 +941,7 @@ const App = () => {
                 <Search size={15} className="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400" />
                 <input
                   type="text"
-                  placeholder="Filter certifications (e.g. NPTEL, AWS, Java)..."
+                  placeholder="Filter certifications (e.g. NPTEL, Java, Python)..."
                   value={certSearch}
                   onChange={(e) => setCertSearch(e.target.value)}
                   className="w-full pl-9 pr-3 py-2 rounded-lg bg-white border border-zinc-200 text-xs font-medium text-zinc-800 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zinc-900/10 focus:border-zinc-400 transition-all"
